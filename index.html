@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="InterTracker: Discovering and Tracking General Objects Interacting with Hands in the Wilds.">
+        content="Context-Aware Integration of Language and Visual References for Natural Language Tracking.">
   <meta name="keywords" content="human interaction, tracking and detection">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>InterTracker: Discovering and Tracking General Objects Interacting with Hands in the Wilds</title>
+  <title>Context-Aware Integration of Language and Visual References for Natural Language Tracking</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -88,45 +88,40 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">InterTracker: Discovering and Tracking General Objects Interacting
-            with Hands in the Wild</h1>
+          <h1 class="title is-1 publication-title">Context-Aware Integration of Language and Visual References for Natural Language Tracking</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="">Yanyan Shao</a><sup>1</sup>,</span>
             <span class="author-block">
               <a href="https://person.zju.edu.cn/en/yeqi/">Qi Ye</a><sup>2</sup>,</span>
             <span class="author-block">
-              <a href=" ">Wenhan Luo</a><sup>3</sup>,
+              <a href=" ">Shuting He</a><sup>2</sup>,
             </span>
             <span class="author-block">
-              <a href=" ">Kaihao Zhang</a><sup>4</sup>,
+              <a href=" ">Qi Ye</a><sup>3</sup>,
             </span>
             <span class="author-block">
-              <a href=" ">Jiming Chen</a><sup>1,2</sup>,
+              <a href=" ">Yuchao Feng</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href=" ">Wenhan Luo</a><sup>4</sup>,
+            </span>  
+            <span class="author-block">
+              <a href=" ">Jiming Chen</a><sup>1,3</sup>,
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Zhejiang University of Technology,</span>
-            <span class="author-block"><sup>2</sup>Zhejiang University</span>
-            <span class="author-block"><sup>3</sup>Sun Yat-sen University</span>
-            <span class="author-block"><sup>4</sup>Australian National University</span>
+            <span class="author-block"><sup>1</sup>Zhejiang University of Technology</span>
+            <span class="author-block"><sup>2</sup>Nanyang Technological University</span>
+            <span class="author-block"><sup>3</sup>Zhejiang University</span>
+            <span class="author-block"><sup>4</sup>The Hong Kong University of Science and Technology</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
-              <!-- <span class="link-block">
-                <a href="https://arxiv.org/abs/2308.03061"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span> -->
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2308.03061"
+                <a href="https://arxiv.org/pdf/2403.19975"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -135,20 +130,20 @@
                 </a>
               </span>
               <!-- Video Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://youtu.be/sZ_6KXDwxvo"
-                class="external-link button is-normal is-rounded is-dark">
+                class="external-link button is-normal is-rounded is-dark"> -->
                 <!-- <a href="https://www.youtube.com/watch?v=cDTl51qLmLg&feature=youtu.be"
                    class="external-link button is-normal is-rounded is-dark"> -->
-                  <span class="icon">
+                  <!-- <span class="icon">
                       <i class="fab fa-youtube"></i>
                   </span>
                   <span>Video</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/twotwo2/TIO"
+                <a href="https://github.com/twotwo2/QueryNLT"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -177,15 +172,25 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <p><img src="static/images/detect_model_00.png" height=120%/></p>
+      <p><img src="static/images/intro.pdf" height=120%/></p>
       <h2 class="subtitle has-text-centered" style="font-size: 16px">
-        The architecture of our proposed TIO. It consists of two primary
-          modules, namely the interaction detection module (indicated by blue block)
-          and the motion modelling module (indicated by green block). The former
-          discovers the interacting objects from the scene by estimating the hand-to-object position and updates them to the memory. The latter is responsible for
-          keeping track of the interacting objects in memory. The two are combined
-          to produce accurate and continuous interacting object trajectories in the
-          sequence.
+        Given a video sequence, the tracking object is characterized as “white bird on the left” of the initial frame. Existing
+        two-step approaches separately perform language-search matching (a) and appearance-search matching (b). However, “on the
+        left” which is inconsistent with the current target and the background contained in the grounded target may confuse the identification of the target. In contrast, our QueryNLT (c) forms a dynamic and context-aware query for target localization by integrating visual and language references. (Zoom in for a better view).
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <p><img src="static/images/framework.pdf" height=120%/></p>
+      <h2 class="subtitle has-text-centered" style="font-size: 16px">
+        Overview of our proposed framework. It comprises three key components: a feature extraction module for extracting image and
+        text features, a prompt modulation module that generates precise appearance and language descriptions of the target, and a target decoding
+        module that jointly establishes the correlation between the search image and the multi-modal target prompts for target retrieval.
       </h2>
     </div>
   </div>
@@ -201,13 +206,22 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Understanding human interaction with objects is an important research topic 
-            for embodied Artificial Intelligence and identifying the objects that humans 
-            are interacting with is a primary problem for interaction understanding.
-            Existing methods rely on frame-based detectors to locate interacting objects. 
-            However, this approach is subjected to heavy occlusions, background clutter, and distracting objects.
+            Tracking by natural language specification (TNL) aims
+            to consistently localize a target in a video sequence
+            given a linguistic description in the initial frame. Existing methodologies perform language-based and templatebased matching for target reasoning separately and merge
+            the matching results from two sources, which suffer from
+            tracking drift when language and visual templates missalign with the dynamic target state and ambiguity in the
+            later merging stage. To tackle the issues, we propose a joint
+            multi-modal tracking framework with 1) a prompt modulation module to leverage the complementarity between
+            temporal visual templates and language expressions, enabling precise and context-aware appearance and linguistic
+            cues, and 2) a unified target decoding module to integrate
+            the multi-modal reference cues and executes the integrated
+            queries on the search image to predict the target location in
+            an end-to-end manner directly. This design ensures spatiotemporal consistency by leveraging historical visual information and introduces an integrated solution, generating
+            predictions in a single step. Extensive experiments conducted on TNL2K, OTB-Lang, LaSOT, and RefCOCOg validate the efficacy of our proposed approach. The results
+            demonstrate competitive performance against state-of-theart methods for both tracking and grounding.
           </p>
-          <p>
+          <!-- <p>
             To address the limitations, in this paper, we propose to leverage spatio-temporal information of 
             hand-object interaction to track interactive objects under these challenging cases.  
             Without prior knowledge of the general objects to be tracked like object tracking problems, 
@@ -224,7 +238,7 @@
             different objects, we achieve an impressive improvement of about 10% as evaluated using the Average 
             Precision (AP) metric. Our qualitative findings also illustrate that our method can produce more 
             continuous trajectories for interacting objects.
-          </p>
+          </p> -->
         </div>
       </div>
     </div>
@@ -235,14 +249,14 @@
     <!--/ Paper video. -->
   </div>
 </section>
-  <div class="columns is-centered has-text-centered" id="video">
+  <!-- <div class="columns is-centered has-text-centered" id="video">
     <div class="column is-four-fifths">
       <h2 class="title is-3">Video</h2>
       <video id="video" controls playsinline height="100%" width=60%>
         <source src="static/videos/IROS23_2715.mp4" type="video/mp4" />
       </video>
     </div>
-  </div>
+  </div> -->
     <!--/ Paper video. -->
   </div>
 </section>
@@ -266,7 +280,7 @@
         <div class="content">
           <div class="b-dics">
             <img src="static/images/res2.png" alt="Original" width=100%/>
-            <img src="static/images/res3.png" alt="Original" width=100%/>
+            <img src="static/images/vis.png" alt="Original" width=100%/>
           </div>
         </div>
       </div>
@@ -285,10 +299,10 @@
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{tio2023,
-  author    = {Shao, Yanyan and Ye, Qi and Luo, Wenhan and Zhang, Kaihao and Chen, Jiming},
-  title     = {InterTracker: Discovering and Tracking General Objects Interacting with Hands in the Wilds},
-  journal   = {IROS},
-  year      = {2023},
+  author    = {Shao, Yanyan and Shuting, He and Qi, Ye and Yuchao, Feng and Wenhan, Luo and Jiming, Chen},
+  title     = {Context-Aware Integration of Language and Visual References for Natural Language Tracking},
+  journal   = {CVPR},
+  year      = {2024},
 }</code></pre>
   </div>
 </section>
